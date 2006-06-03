@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * MS	06-06-03	added comment that the BitmapConverter does not cache the
+ *					image for AjaxServerCache attribute duration
+ * 
+ * 
+ * 
+ * 
+ */
+using System;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -392,6 +400,9 @@ public partial class MyAjaxMethods
 	[AjaxPro.AjaxServerCache(10)]
 	public static Bitmap Test27()
 	{
+		// BUG: Ajax.NET does not cache the image for the same time
+		//		as the AjaxServerCache attribute.
+
 		Bitmap pic = new Bitmap(300, 80);
 		Graphics g = Graphics.FromImage(pic);
 		// g.SmoothingMode = SmoothingMode.AntiAlias;
