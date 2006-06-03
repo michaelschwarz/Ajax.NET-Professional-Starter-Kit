@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Feedback.aspx.cs" Inherits="FeedbackWebForm" Title="Ajax.NET Professional - Feedback Example" %>
+<%@ Register TagPrefix="MS" TagName="ArticleInfo"  Src="~/controls/ArticleInfo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 		<div id="d_Message" style="background-color:Lime;color:Black;padding:3px;text-align:center;visibility:hidden">Thanks for sending us your feedback!</div>
