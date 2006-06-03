@@ -1,0 +1,274 @@
+body { 
+ 	background-color: #FFFFFF; 
+ 	margin: 0px; 
+ 	margin-bottom: 0px; 	
+ 	font-size: 100%; 
+ 	font-family: Verdana, Arial, Helvetica, sans-serif; 
+ 	font-weight: normal; 
+ 	border-top: #FFFFFF 
+	height: 100%
+}
+ 
+h1	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 130%;
+	font-weight: normal;
+	margin: 12px 0px 0px 0px;
+	color: #000000;
+	}
+
+h2.subtitle	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 95%;
+	font-weight: normal;
+	margin: 2px 0px 0em 0px;
+	padding: 0px;
+	}
+
+h2	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 95%;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 8px 0px 4px 0px;
+	}
+
+h3	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	margin: 8px 0px 0px 0px;
+	padding-bottom: 4px;
+	}
+
+h4	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 75%;
+	font-weight: bold;
+	margin: 0px;
+	}
+
+h5	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	font-weight: bold;
+	margin: 0px;
+	}
+
+h6	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+	}
+
+p	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	line-height: 140%;
+	padding: 0px 0px 1em 0px;
+	margin: 0px;
+	}
+
+.date	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	color: #666666;
+	margin-top: 9px;
+	}
+
+.datePipe	{
+	color: #CCCCCC;
+	}
+
+.byline	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	color: #666666;
+	}
+
+hr	{
+	color: #CCCCCC;
+	height: 1px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	}
+
+a	{
+	color: #0033CC;
+	}
+
+a:link	{
+	color: #0033CC;
+	}
+
+a:visited	{
+	color: #800080;
+	}
+
+a:hover	{
+	color: #FF6600;
+	}
+
+a:active	{
+	color: #800080;
+	}
+
+.overview	{
+	padding-top: 10px;
+}
+
+.overviewPara	{
+	padding-top: 10px;
+	}
+
+.containerHeader	{
+	background: #999999;
+	}
+
+.containerFooter	{
+	background: #999999;
+	margin-bottom: 12px;
+	}
+
+.relatedLink	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	padding-bottom: 7px;
+	}
+
+ul	
+{
+	list-style-image:url('../images/bullet.gif');
+	margin: 0px;
+	padding-left: 2.75ex;
+	padding-bottom: 1em;
+}
+	
+li
+	{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 70%;
+		line-height: 140%;
+	}
+
+.numberedList	{
+	margin-bottom: -1px;
+	}
+
+.numberedList p	{
+	padding-bottom: 1.1em;
+	}
+
+.listNumber	{
+	padding-right: 1.5ex;
+	padding-left: 2.1ex;
+	}
+
+.pageNumber	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	padding: 0px 5px;
+	}
+
+.footnote	{
+	font: 70% Arial;
+	position: relative;
+	top: -0.2em;
+	}
+
+td.footnote	{
+	font: 55% Arial;
+	padding-right: 1ex;
+	}
+
+.footnoteText	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	}
+
+.footnotes	
+{
+	margin-top: 11px;
+	margin-bottom: 36px;
+	}
+
+pre.codeSample {
+	background: #DDDDDD;
+	font-family: Lucida Console, Courier New;
+	font-size: 70%;
+	padding: 10px 15px 10px 25px;
+	margin-bottom: 1em;
+}
+
+#content 
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+DIV#footer A {
+	color: #0033cc;
+	font-weight: normal;
+}
+
+DIV#footer_links {
+	padding-top:10px;
+	padding-bottom:6px;
+}
+
+DIV#footer {
+	height:57px; 
+	font:bold 70% verdana;
+	font-weight:normal;
+	color:#000000;
+	padding-left:10px; 
+	margin-top:50px;
+	border-top:1px solid #999999; 
+	background-color:#FFFFFF; 
+	xbackground-image:url('../images/indicator.gif'); 
+	background-position:right; 
+	background-repeat:repeat-y;
+}
+
+
+
+
+#searchCustomerID_list
+{
+	background-color:White;
+	width:200px;
+}
+#searchCustomerID_list div.item 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color:White;
+	cursor:hand;
+	padding-left:2px;
+	height:16px;
+}
+#searchCustomerID_list div.selected
+{
+	background-color:Blue;
+	color:White
+}
+
+#searchOrder_list
+{
+	background-color:White;
+}
+#searchOrder_list div.item
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color:White;
+	cursor:hand;
+	padding-left:2px;
+	height:16px;
+}
+#searchOrder_list div.selected 
+{
+	background-color:Blue;
+	color:White
+}

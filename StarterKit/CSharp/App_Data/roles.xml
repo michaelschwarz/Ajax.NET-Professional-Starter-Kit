@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<roles>
+	<user name="admin" roles="Admin,Editor"/>
+	<user name="editor" roles="Editor"/>
+</roles>
