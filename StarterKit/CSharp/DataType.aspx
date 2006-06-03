@@ -1,12 +1,13 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DataType.aspx.cs" Inherits="DataTypeWebForm" Title="Ajax.NET Professional - Data Type Examples" %>
+<%@ Register TagPrefix="MS" TagName="ArticleInfo"  Src="~/controls/ArticleInfo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<h1>DataTypes working with Ajax.NET</h1>
-
-<div class="date">Published: 02.06.2005<span class="datePipe"> | </span>Edited: 02.06.2006</div>
-<div class="byline">Michael Schwarz</div>
-<div class="overview"><p>Ajax.NET allows you to return any kind of class or struct. Mark your method with the AjaxMethod attribut, register the type to create wrapper files, finished!</p></div>
-<div style="height: 18px"></div>
+<MS:ArticleInfo ID="ArticleInfo1" runat="server"
+	Title="DataTypes working with Ajax.NET"
+	Published="2006-06-03T10:00:00"
+	Author="Michael Schwarz"
+	Description="Ajax.NET allows you to return any kind of class or struct. Mark your method with the AjaxMethod attribut, register the type to create wrapper files, finished!"
+/>
 
 <!-- content -->
 

@@ -1,12 +1,13 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Converter.aspx.cs" Inherits="ConverterWebForm" Title="Ajax.NET Professional - JSON Converters" %>
+<%@ Register TagPrefix="MS" TagName="ArticleInfo"  Src="~/controls/ArticleInfo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<h1>IJavaScriptConverter Example</h1>
-
-<div class="date">Published: 02.06.2005<span class="datePipe"> | </span>Edited: 02.06.2006</div>
-<div class="byline">Michael Schwarz</div>
-<div class="overview"><p> </p></div>
-<div style="height: 18px"></div>
+<MS:ArticleInfo ID="ArticleInfo1" runat="server"
+	Title="IJavaScriptConverter Example"
+	Published="2006-06-03T10:00:00"
+	Author="Michael Schwarz"
+	Description=" "
+/>
 
 <!-- content -->
 

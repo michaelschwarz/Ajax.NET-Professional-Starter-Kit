@@ -1,13 +1,13 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AutoComplete.aspx.cs" Inherits="AutoCompleteWebForm" Title="Ajax.NET Professional - AutoComplete Example" %>
+<%@ Register TagPrefix="MS" TagName="ArticleInfo"  Src="~/controls/ArticleInfo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<h1>AutoComplete Example</h1>
-
-<div class="date">Published: 02.06.2005<span class="datePipe"> | </span>Edited: 02.06.2006</div>
-<div class="byline">Michael Schwarz</div>
-<div class="overview"><p>Ajax.NET comes without any web control, it is designed only for data exchange with the web server. Here you will see how easy it is to implement a AutoComplete feature.</p></div>
-<div style="height: 18px"></div>
-
+<MS:ArticleInfo runat="server"
+	Title="AutoComplete Example"
+	Published="2006-06-03T10:00:00"
+	Author="Michael Schwarz"
+	Description="Ajax.NET comes without any web control, it is designed only for data exchange with the web server. Here you will see how easy it is to implement a AutoComplete feature."
+/>
 
 <p>This example will include following features:</p>
 

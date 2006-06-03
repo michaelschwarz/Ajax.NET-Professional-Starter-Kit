@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Interval.aspx.cs" Inherits="IntervalWebForm" Title="Ajax.NET Professional - Interval and Object Example" %>
+<%@ Register TagPrefix="MS" TagName="ArticleInfo"  Src="~/controls/ArticleInfo.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
 <div id="loading" style="position:absolute;left:1px;top:1px;color:White;background-color:Red;padding:2px;margin:2px;display:none;">Loading...</div>
