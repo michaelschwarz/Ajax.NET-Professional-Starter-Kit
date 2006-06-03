@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Ajax.NET Professional - Starter Kit</title>
+    <style type="text/css">
+@import url(css/common.css);
+	</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div id="nav">
+		<ul>
+			<li><a href="default.aspx">Home</a></li>
+			<li><a href="autocomplete.aspx">AutoComplete</a></li>
+			<li><a href="datatype.aspx">DataTypes</a></li>
+			<li><a href="feedback.aspx">Feedback</a></li>
+			<li><a href="interval.aspx">Special Examples</a></li>
+			<li><a href="security.aspx">Security</a></li>
+			<li><a href="converter.aspx">Converters</a></li>
+		</ul> 
+    </div>
+
+	<div style="text-align:center">
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="468" height="60" id="ms" align="middle">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<param name="movie" value="http://www.ajaxpro.info/flash/468060-1.swf?clicktag=http://go.microsoft.com/?linkid=4937366" />
+		<param name="quality" value="high" />
+		<param name="bgcolor" value="#f1f1f1" />
+		<embed src="http://www.ajaxpro.info/flash/468060-1.swf?clicktag=http://go.microsoft.com/?linkid=4937366" quality="high" bgcolor="#f1f1f1" width="468" height="60" name="ms" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+	</div>
+
+	<div id="content">
+		<asp:contentplaceholder id="ContentPlaceHolder1" runat="server"></asp:contentplaceholder>
+	</div>
+
+	<div id="footer">
+		<div id="footer_links">
+			<a href="http://weblogs.asp.net/mschwarz/">Blog at ASP.NET</a>
+		</div>
+		<span title="©2006 Michael Schwarz. All rights reserved.">&copy;2006 Michael Schwarz. All rights reserved.</span>
+	</div>
+
+    </form>
+</body>
+</html>
