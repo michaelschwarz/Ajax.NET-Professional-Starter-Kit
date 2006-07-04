@@ -15,6 +15,7 @@
     <div id="nav">
 		<ul>
 			<li><a href="default.aspx">Home</a></li>
+			<li><a href="caching.aspx">Caching</a></li>
 			<li><a href="autocomplete.aspx">AutoComplete</a></li>
 			<li><a href="datatype.aspx">DataTypes</a></li>
 			<li><a href="feedback.aspx">Feedback</a></li>
