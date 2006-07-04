@@ -1,9 +1,11 @@
-addNamespace("MS.Web.Security");
 
-MS.Web.Security = function(u_ele, p_ele, msg_ele) {
-	this.u_ele = $(u_ele);
-	this.p_ele = $(p_ele);
-	this.msg_ele = $(msg_ele);
+if(typeof MS == "undefined") MS={};
+if(typeof MS.Web == "undefined") MS.Web={};
+
+MS.Web.Security = function(a, b, c) {
+	this.u_ele = $(a);
+	this.p_ele = $(b);
+	this.msg_ele = $(c);
 }
 
 Object.extend(MS.Web.Security.prototype, {
@@ -45,6 +47,7 @@ Object.extend(MS.Web.Security.prototype, {
 		AjaxPro.Services.Authentication.Login(this.u_ele.value, this.p_ele.value, this.doLogin_callback.bind(this));
 	},
 	doLogin_callback: function(res) {
+
 		var c = this.msg_ele;
 		if(res.error != null) {
 			c.innerHTML = res.error.Message;
@@ -61,6 +64,7 @@ Object.extend(MS.Web.Security.prototype, {
 		this.doClear();
 	},
 	signOut: function() {
+
 		AjaxPro.Services.Authentication.Logout(this.signOut_callback.bind(this));
 	},
 	signOut_callback: function(res) {

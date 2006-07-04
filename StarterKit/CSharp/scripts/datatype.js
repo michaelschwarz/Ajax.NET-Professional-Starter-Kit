@@ -233,6 +233,62 @@ var tests = [
 		}
 	},
 	{
+		desc: "Checks if we can return a NameValueCollection.",
+		run:function() { MyAjaxMethods.Test28(callback); },
+		callback:function(res) {
+			return res.value != null && res.value.getValue("firstName") == "Michael";
+		}
+	},
+	{
+		desc: "Checks if we can return a Dictionary<string,string>.",
+		showValue: false,
+		run:function() { MyAjaxMethods.Test29(null, callback); },
+		callback:function(res) {
+			oldResult = res.value;
+			return res.value != null && res.value.getValue("firstName") == 1;
+		}
+	},
+	{
+		desc: "Checks if we can send and return a Dictionary<string,string>.",
+		showValue: false,
+		run:function() { MyAjaxMethods.Test29(oldResult, callback); },
+		callback:function(res) {
+			oldResult = res.value;
+			return res.value != null && res.value.getValue("firstName") == 1 && res.value.getValue("test") == 90547;
+		}
+	},
+	{
+		desc: "Checks if we can create a NameValueCollection on the client using new Ajax.Web.NameValueCollection().",
+		showValue: false,
+		run:function() {
+			var o = new Ajax.Web.NameValueCollection();
+			o.add("lastName", "Schwarz");
+			MyAjaxMethods.Test30(o, callback);
+		},
+		callback:function(res) {
+			oldResult = res.value;
+			return res.value != null && res.value.getValue("lastName") == "Schwarz";
+		}
+	},
+	{
+		desc: "Checks if we can get a JavaScript object from a RSS xml file.",
+		showValue: false,
+		run:function() { MyAjaxMethods.Test31(callback); },
+		callback:function(res) {
+			var x=[];
+			x.push("<div style=\"margin:5px;padding:3px;\"><p>");
+			var chn = res.value.channel;
+			x.push("<a href=\"" + chn.link + "\"><b>" + chn.title + "</b></a><br/>");
+			for(var i=0; i<chn.item.length; i++) {
+				x.push(chn.item[i].title + "<br/>");
+			}
+			x.push("</p></div>");
+			this.html = x.join("");
+
+			return res.value.channel.title == "Ajax.NET Professional Google Group";
+		}
+	},
+	{
 		run:function() {
 			// alert("Done.");
 		}
@@ -262,7 +318,9 @@ function callback(res) {
 		
 		if(tests[i].showValue != false) {
 			v.push("<pre class=\"codeSample\"><b>res.request:</b>\r\n " + AjaxPro.toJSON(res.request).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "\r\n");
-			v.push("<b>res.value:</b>\r\n " + AjaxPro.toJSON(res.value).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "</pre>");
+
+			if(typeof res.json != null)
+				v.push("<b>res.value:</b>\r\n " + (res.json+"").replace(/</g,"&lt;").replace(/>/g,"&gt;") + "</pre>");
 		}
 		
 		v.push("</p>");
@@ -277,7 +335,9 @@ function callback(res) {
 		v.push("</p>");
 		v.push("<pre class=\"codeSample\"><b>res.error:</b>\r\n " + AjaxPro.toJSON(res.error).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "\r\n");
 		v.push("<b>res.request:</b>\r\n " + AjaxPro.toJSON(res.request).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "\r\n");
-		v.push("<b>res.value:</b>\r\n " + AjaxPro.toJSON(res.value).replace(/</g,"&lt;").replace(/>/g,"&gt;") + "</pre>");
+
+		if(typeof res.json != null)
+			v.push("<b>res.value:</b>\r\n " + (res.json+"").replace(/</g,"&lt;").replace(/>/g,"&gt;") + "</pre>");
 	}
 
 
