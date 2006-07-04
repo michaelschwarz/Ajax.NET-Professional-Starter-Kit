@@ -1,12 +1,13 @@
 ﻿/*
  * MS	06-06-03	added comment that the BitmapConverter does not cache the
  *					image for AjaxServerCache attribute duration
- * 
+ * MS	06-07-04	added some more demo methods
  * 
  * 
  * 
  */
 using System;
+using System.Xml;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -397,12 +398,8 @@ public partial class MyAjaxMethods
 	}
 
 	[AjaxPro.AjaxMethod]
-	[AjaxPro.AjaxServerCache(10)]
 	public static Bitmap Test27()
 	{
-		// BUG: Ajax.NET does not cache the image for the same time
-		//		as the AjaxServerCache attribute.
-
 		Bitmap pic = new Bitmap(300, 80);
 		Graphics g = Graphics.FromImage(pic);
 		// g.SmoothingMode = SmoothingMode.AntiAlias;
@@ -418,6 +415,53 @@ public partial class MyAjaxMethods
 
 		return pic;
 	}
+
+	[AjaxPro.AjaxMethod]
+	public static System.Collections.Specialized.NameValueCollection Test28()
+	{
+		System.Collections.Specialized.NameValueCollection n = new System.Collections.Specialized.NameValueCollection();
+
+		n.Add("firstName", "Michael");
+		n.Add("lastName", "Schwarz");
+		n.Add("xy", "Hello World");
+
+		return n;
+	}
+
+	[AjaxPro.AjaxMethod]
+	public static System.Collections.Generic.Dictionary<string, int> Test29(System.Collections.Generic.Dictionary<string, int> n)
+	{
+		if (n == null)
+		{
+			n = new System.Collections.Generic.Dictionary<string, int>();
+
+			n.Add("firstName", 1);
+			n.Add("lastName", 2);
+			n.Add("xy", 4333);
+		}
+		else n.Add("test", 90547);
+
+		return n;
+	}
+
+	[AjaxPro.AjaxMethod]
+	public static System.Collections.Specialized.NameValueCollection Test30(System.Collections.Specialized.NameValueCollection n)
+	{
+		n.Add("test", "AJAX");
+		return n;
+	}
+
+	[AjaxPro.AjaxMethod]
+	[AjaxPro.AjaxServerCache(60)]
+	public static AjaxPro.IJavaScriptObject Test31()
+	{
+		XmlDocument doc = new XmlDocument();
+
+		doc.Load("http://groups.google.de/group/ajaxpro/feed/rss_v2_0_msgs.xml");
+
+		return AjaxPro.JavaScriptUtil.GetIJavaScriptObjectFromXmlNode(doc.DocumentElement);
+	}
+
 }
 
 
