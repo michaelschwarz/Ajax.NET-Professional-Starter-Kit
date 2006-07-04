@@ -16,17 +16,23 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class CachingWebForm : System.Web.UI.Page
+public partial class SessionWebForm : System.Web.UI.Page
 {
 	[AjaxPro.AjaxMethod]
-	[AjaxPro.AjaxServerCache(10)]
-	public static DateTime GetServerTime()
+	public static bool SetSession(string name, string value)
 	{
-		return DateTime.Now;
+		HttpContext.Current.Session[name] = value;
+		return true;
+	}
+
+	[AjaxPro.AjaxMethod]
+	public static string GetSession(string name)
+	{
+		return HttpContext.Current.Session[name].ToString();
 	}
 
     protected void Page_Load(object sender, EventArgs e)
     {
-		AjaxPro.Utility.RegisterTypeForAjax(typeof(CachingWebForm));
+		AjaxPro.Utility.RegisterTypeForAjax(typeof(SessionWebForm));
     }
 }
