@@ -452,14 +452,24 @@ public partial class MyAjaxMethods
 	}
 
 	[AjaxPro.AjaxMethod]
-	[AjaxPro.AjaxServerCache(60)]
+	[AjaxPro.AjaxServerCache(240)]
 	public static AjaxPro.IJavaScriptObject Test31()
 	{
 		XmlDocument doc = new XmlDocument();
-
 		doc.Load("http://groups.google.de/group/ajaxpro/feed/rss_v2_0_msgs.xml");
 
 		return AjaxPro.JavaScriptUtil.GetIJavaScriptObjectFromXmlNode(doc.DocumentElement);
+	}
+
+	[AjaxPro.AjaxMethod]
+	public static DataSet1.CustomersDataTable Test32()
+	{
+		DataSet1.CustomersDataTable dt = new DataSet1.CustomersDataTable();
+
+		DataSet1TableAdapters.CustomersTableAdapter da = new DataSet1TableAdapters.CustomersTableAdapter();
+		da.Fill(dt);
+
+		return dt;
 	}
 
 }

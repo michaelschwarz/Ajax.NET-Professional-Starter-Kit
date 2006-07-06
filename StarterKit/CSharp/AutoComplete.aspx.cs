@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * MS	06-07-05	use new connection strings in web.config
+ * 
+ * 
+ * 
+ */
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -21,7 +27,10 @@ public partial class AutoCompleteWebForm : System.Web.UI.Page
 		dt.Columns.Add("CustomerID", typeof(int));
 		dt.Columns.Add("CustomerName", typeof(string));
 
-		SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["AjaxDemoSqlServer"]);
+		System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
+		System.Configuration.ConnectionStringSettings connString = rootWebConfig.ConnectionStrings.ConnectionStrings["AjaxDemoConnectionString"];
+
+		SqlConnection conn = new SqlConnection(connString.ConnectionString);
 
 		SqlCommand cmd = new SqlCommand("SELECT TOP " + count + " ID, Name FROM Customers WHERE Name LIKE @Name ORDER BY Name", conn);
 		cmd.Parameters.AddWithValue("@Name", search + "%");
@@ -68,7 +77,10 @@ public partial class AutoCompleteWebForm : System.Web.UI.Page
 	{
 		DataSet ds = new DataSet();
 
-		SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["AjaxDemoSqlServer"]);
+		System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
+		System.Configuration.ConnectionStringSettings connString = rootWebConfig.ConnectionStrings.ConnectionStrings["AjaxDemoConnectionString"];
+
+		SqlConnection conn = new SqlConnection(connString.ConnectionString);
 		
 		SqlCommand cmd = new SqlCommand("SELECT TOP " + count + " * FROM Orders WHERE CustomerID = @CustomerID AND OrderNumber LIKE @OrderNumber ORDER BY OrderNumber, PartNumber, JobNumber", conn);
 		cmd.Parameters.AddWithValue("@CustomerID", customerID);
