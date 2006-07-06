@@ -9,5 +9,10 @@
 	Description="This Starter Kit will help you to develop great web sites using Ajax.NET Professional"
 />
 
+<p><a href="http://www.codeplex.com/SourceControl/ListDownloadableCommits.aspx?ProjectName=AjaxProStarterKit">Download</a> the source code of this web site, if you have any question using this Starter Kit or the Ajax.NET Professional library use the <a href="http://groups.google.com/group/ajaxpro">Ajax.NET Professional Google group</a>.</p>
+<p></p>
+<p></p>
+<p></p>
+
 </asp:Content>
 
