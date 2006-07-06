@@ -15,12 +15,12 @@
     <div id="nav">
 		<ul>
 			<li><a href="default.aspx">Home</a></li>
+			<li><a href="datatype.aspx">How to use .NET data types on client-side code?</a></li>
+			<li><a href="security.aspx">How to add security to your AjaxMethods?</a></li>
 			<li><a href="caching.aspx">How to use the AjaxServerCache attribute?</a></li>
 			<li><a href="session.aspx">How to access the Session collection?</a></li>
 			<li><a href="autocomplete.aspx">How to write your own AutoComplete textbox?</a></li>
-			<li><a href="datatype.aspx">How to use .NET data types on client-side code?</a></li>
 			<li><a href="feedback.aspx">How to create a simple feedback form?</a></li>
-			<li><a href="security.aspx">How to add security to your AjaxMethods?</a></li>
 			<li><a href="converter.aspx">How to write IJavaScriptConverters?</a></li>
 			<li><a href="interval.aspx">Special Examples</a></li>
 		</ul> 
@@ -32,7 +32,8 @@
 
 	<div id="footer">
 		<div id="footer_links">
-			<a href="http://weblogs.asp.net/mschwarz/">Blog at ASP.NET</a>
+			<a href="http://weblogs.asp.net/mschwarz/">Blog at ASP.NET</a><br />
+			<a href="http://www.codeplex.com/SourceControl/ListDownloadableCommits.aspx?ProjectName=AjaxProStarterKit">Download</a> source code of this web site!
 		</div>
 		<span title="©2006 Michael Schwarz. All rights reserved.">&copy;2006 Michael Schwarz. All rights reserved.</span>
 	</div>
