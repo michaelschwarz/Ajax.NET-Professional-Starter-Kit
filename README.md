@@ -1,1 +1,1 @@
-# Ajax.NET-Professional-Starter-Kit
+# Ajax.NET Professional - Starter Kit
