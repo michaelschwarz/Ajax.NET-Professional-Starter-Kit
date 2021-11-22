@@ -6,8 +6,8 @@
 public class MyAjaxClass
 {
 	private string m_FirstName = "Michael";
-	private int m_Age = 29;
-	public DateTime Birthday = new DateTime(1977, 4, 20);
+	private int m_Age = 35;
+	public DateTime Birthday = new DateTime(1987, 4, 20);
 	
 	public MyAjaxClass()
 	{
