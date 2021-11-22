@@ -25,7 +25,6 @@ public partial class SecurityWebForm : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 		// Register Ajax.NET methods from this class
-		AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxPro.Services.AuthenticationService));
 		AjaxPro.Utility.RegisterTypeForAjax(typeof(SecurityWebForm));
     }
 }

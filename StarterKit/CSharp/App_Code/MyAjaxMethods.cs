@@ -417,9 +417,9 @@ public partial class MyAjaxMethods
 	}
 
 	[AjaxPro.AjaxMethod]
-	public static System.Collections.Specialized.NameValueCollection Test28()
+	public static System.Collections.Generic.Dictionary<string, string> Test28()
 	{
-		System.Collections.Specialized.NameValueCollection n = new System.Collections.Specialized.NameValueCollection();
+		System.Collections.Generic.Dictionary<string, string> n = new System.Collections.Generic.Dictionary<string, string>();
 
 		n.Add("firstName", "Michael");
 		n.Add("lastName", "Schwarz");
@@ -460,18 +460,6 @@ public partial class MyAjaxMethods
 
 		return AjaxPro.JavaScriptUtil.GetIJavaScriptObjectFromXmlNode(doc.DocumentElement);
 	}
-
-	[AjaxPro.AjaxMethod]
-	public static DataSet1.CustomersDataTable Test32()
-	{
-		DataSet1.CustomersDataTable dt = new DataSet1.CustomersDataTable();
-
-		DataSet1TableAdapters.CustomersTableAdapter da = new DataSet1TableAdapters.CustomersTableAdapter();
-		da.Fill(dt);
-
-		return dt;
-	}
-
 }
 
 

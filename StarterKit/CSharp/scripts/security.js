@@ -44,7 +44,7 @@ Object.extend(MS.Web.Security.prototype, {
 		c.style.color = "White";
 	},
 	doLogin: function() {
-		AjaxPro.Services.Authentication.Login(this.u_ele.value, this.p_ele.value, this.doLogin_callback.bind(this));
+		alert("no longer supported");
 	},
 	doLogin_callback: function(res) {
 

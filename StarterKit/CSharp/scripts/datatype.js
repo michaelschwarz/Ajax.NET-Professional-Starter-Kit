@@ -289,16 +289,6 @@ var tests = [
 		}
 	},
 	{
-		desc: "Checks if we can return a type safe DataSet.",
-		showValue: false,
-		run:function() { MyAjaxMethods.Test32(callback); },
-		callback:function(res) {
-			if(res.error != null || res.value == null) return false;
-			if(res.value.Rows != null && res.value.Rows.length > 0) return true;
-			return false;
-		}
-	},
-	{
 		run:function() {
 			// alert("Done.");
 		}
