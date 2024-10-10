@@ -14,7 +14,7 @@
         </div>
     </form>
 
-    <script nonce="abcdefghijklmnopqrstuvwxyz" src="scripts/jquery-3.6.4.min.js"></script>
+    <script nonce="abcdefghijklmnopqrstuvwxyz" src="scripts/jquery-3.7.1.min.js"></script>
     <script nonce="abcdefghijklmnopqrstuvwxyz">
 
         function test_callback(res) {
